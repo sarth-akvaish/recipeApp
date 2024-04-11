@@ -17,17 +17,17 @@ const Header = () => {
 
 
     return (
-        <div className='flex justify-between items-center bg-orange-300 p-4 w-full px-4 md:px-8'>
+        <div className='flex justify-between items-center bg-orange-300 md:p-4 p-2 w-full md:px-8'>
             <div className='flex'>
                 <Link to={'/'} className='text-green-900 font-bold text-lg md:text-2xl px-2 md:px-4 py-2'>Recipefy</Link>
             </div>
             <div className='flex relative'>
-                <input className='md:w-[400px] w-[200px] relative rounded-[40px] focus:outline-none py-2 px-10' type="text" placeholder='Search for Recipes, nutrient, ingredients' value={Search} onChange={(e) => setSearch(e.target.value)} />
-                <IoSearchSharp className='absolute text-xl top-[10px] left-2' />
+                <input className='md:w-[400px] w-[170px] relative rounded-[40px] focus:outline-none text-sm md:text-md py-1 md:py-2 px-10' type="text" placeholder='Search for Recipes, nutrient, ingredients' value={Search} onChange={(e) => setSearch(e.target.value)} />
+                <IoSearchSharp className='absolute text-xl top-[5px] md:top-[10px] left-2' />
             </div>
-            <div className='flex px-4 gap-4'>
-                <Link to={`/auth`}>{data ? data : <FaUser className='text-2xl' />}</Link>
-                <Link to={`/saved-recipes`}><FaBookmark className='text-2xl' /></Link>
+            <div className='flex px-4 gap-1 md:gap-4'>
+                <Link to={`/auth`}>{data ? data : <FaUser className='text-xl text-gray-700 md:text-2xl' />}</Link>
+                <Link to={`/saved-recipes`}><FaBookmark className='text-xl md:text-2xl text-gray-700' /></Link>
             </div>
         </div>
     )
